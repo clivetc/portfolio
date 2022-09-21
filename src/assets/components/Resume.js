@@ -1,5 +1,5 @@
 import React from "react";
-import myResume from '../files/tendairesume.pdf'
+import myResume from '../files/TendaiClive_Chikwape_cv.pdf'
 
 const Resume = () => {
   return (
