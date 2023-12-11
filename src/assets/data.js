@@ -70,6 +70,26 @@ const data = {
 			tags: ["website", "graduation project", "vue.js", "django"],
 			link: "http://ols-staging.herokuapp.com/",
 		},
+		{
+			title: "Library Management System",
+			description: "🧑‍💻 For currently working on a library management system",
+			tags: ["website", "library", "Next.js", "Postgres"],
+			link: "https://library-managemet-system.vercel.app",
+		},
+		{
+			title: "Backend Servers",
+			description:
+				"🧑‍💻 For currently working on different backend projects one with spring boot and the other with Nestjs",
+			tags: [
+				"Backend",
+				"Java Spring-boot",
+				"Nest.js",
+				"Postgres",
+				"tasks",
+				"student-server",
+			],
+			link: "https://github.com/clivetc",
+		},
 	],
 };
 export default data;
