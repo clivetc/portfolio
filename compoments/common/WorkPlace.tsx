@@ -1,78 +1,37 @@
-// Import necessary components and styles from Chakra UI
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, Image, SlideFade } from "@chakra-ui/react";
 import React from "react";
 
-// Define the component
 const WorkPlace = () => {
 	return (
-		<Box bgColor="#FAFAFA" height="50vh" display="grid" placeItems="center">
-			<Box
-				className="container"
-				width={{ md: "800px", base: "420px" }}
-				height="480px"
-				position="relative"
-				top="15%"
-			>
-				{/* Lamp Holder */}
-				<Box className="lamp-holder" />
-
-				{/* Lamp */}
-				<Box className="lamp" />
-
-				{/* Light */}
-				<Box className="light" />
-
-				{/* Wall */}
-				<Box className="wall" />
-
-				{/* Desk */}
-				<Box className="desk" />
-
-				{/* Screen */}
-				<Box className="screen">
-					{/* Sidebar */}
-					<Box className="sidebar">
-						<Box className="h1" />
-						<Box className="h2" />
-					</Box>
-
-					{/* Main */}
-					<Box className="main">
-						{/* Search */}
-						<Box className="search" />
-
-						{/* Pens */}
-						{[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
-							<Box key={index} className={`pen pen${index}`} />
-						))}
-
-						{/* Mouse */}
-						<Box className="mouse" />
-
-						{/* Keyboard */}
-						<Box className="keyboard" />
-
-						{/* Cup */}
-						<Box className="cup">
-							{/* Tea */}
-							<Box className="tea" />
-							{/* Steam */}
-							<Box className="steam" />
-						</Box>
-
-						{/* Plant */}
-						<Box className="plant">
-							{/* Leaves */}
-							<Box className="leaf1" />
-							<Box className="leaf2" />
-							<Box className="leaf3" />
-						</Box>
-					</Box>
+		<SlideFade in offsetY={20}>
+			<Flex justifyContent={"center"} alignItems={"center"}>
+				<Box
+					width={["90%", "80%", "65%"]}
+					height={["90%", "80%", "65%"]}
+					opacity={1}
+					position={"relative"}
+				>
+					<Image
+						src="https://www.bebold.ch/img/home/macbook-white.png"
+						alt="MacBook Computer Apple"
+						width="100%"
+						height="auto"
+					/>
+					<Box
+						id="gif"
+						bgSize="cover"
+						position="absolute"
+						top={["50%", "50%", "50%"]}
+						left="50%"
+						transform="translate(-50%, -50%)"
+						width={["80%", "60%", "50%"]}
+						paddingTop={["50%", "40%", "32%"]}
+						backgroundImage="url(https://www.bebold.ch/img/home/presentation-anim.gif)"
+					/>
 				</Box>
-			</Box>
-		</Box>
+			</Flex>
+		</SlideFade>
 	);
 };
 
-// Export the component
 export default WorkPlace;

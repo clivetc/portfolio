@@ -18,15 +18,7 @@ const Contact = () => {
 	return (
 		<Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
 			<SlideFade in offsetY={80}>
-				<Flex
-					width="full"
-					align="center"
-					justifyContent="center"
-					position={"relative"}
-				>
-					<i className="ring" style={{ borderColor: "#00ff0a" }}></i>
-					<i className="ring" style={{ borderColor: "#ff0057" }}></i>
-					<i className="ring" style={{ borderColor: "#fffd44" }}></i>
+				<Flex width="full" align="center" justifyContent="center">
 					<Box
 						p={8}
 						maxWidth="container.lg"

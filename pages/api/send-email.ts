@@ -16,16 +16,16 @@ export default async function handler(
 		const { name, email, message }: EmailRequestBody = req.body;
 
 		const transporter = nodemailer.createTransport({
-			service: "gmail",
+			service: "hotmail",
 			auth: {
-				user: process.env.GMAIL_USER,
-				pass: process.env.GMAIL_APP_PASSWORD,
+				user: process.env.HOTMAIL_USER,
+				pass: process.env.HOTMAIL_APP_PASSWORD,
 			},
 		});
 
 		const mailOptions = {
-			from: process.env.GMAIL_USER,
-			to: "your-email@hotmail.com",
+			from: process.env.HOTMAIL_USER,
+			to: process.env.GMAIL_USER,
 			subject: "New Message from Contact Form",
 			text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
 		};
