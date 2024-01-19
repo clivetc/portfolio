@@ -22,7 +22,11 @@ import {
 	SiChakraui,
 } from "react-icons/si";
 import { CgAlbum } from "react-icons/cg";
-import { TbBrandCypress, TbBrandNextjs } from "react-icons/tb";
+import {
+	TbBrandCypress,
+	TbBrandNextjs,
+	TbBrandReactNative,
+} from "react-icons/tb";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 const siteConfig = {
@@ -173,6 +177,11 @@ const webTechStacks = [
 	{
 		name: "React",
 		icon: FaReact,
+		url: "https://react.dev/",
+	},
+	{
+		name: "React Native",
+		icon: TbBrandReactNative,
 		url: "https://reactnative.dev/",
 	},
 	{
