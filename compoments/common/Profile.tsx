@@ -62,7 +62,7 @@ const Profile = () => {
 				>
 					React
 				</Link>
-				{" ,"}
+				{" , "}
 				<Link
 					color={useColorModeValue("blue.500", "blue.400")}
 					href="https://www.typescriptlang.org/"
@@ -71,7 +71,7 @@ const Profile = () => {
 				>
 					TypeScript
 				</Link>
-				{" ,"}
+				{" , "}
 				<Link
 					color={useColorModeValue("blue.500", "blue.400")}
 					href="https://nestjs.com/"
@@ -80,7 +80,7 @@ const Profile = () => {
 				>
 					NestJs
 				</Link>
-				{" &"}
+				{" & "}
 				<Link
 					color={useColorModeValue("blue.500", "blue.400")}
 					href="https://spring.io/"
