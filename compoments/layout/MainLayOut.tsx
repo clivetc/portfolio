@@ -10,9 +10,9 @@ interface IMainLayout {
 const MainLayout: React.FC<IMainLayout> = ({ children }) => {
 	return (
 		<>
-			<Analytics mode={"production"} />
 			<Nav />
 			<main>{children}</main>
+			<Analytics mode={"production"} />
 			<Footer />
 		</>
 	);
