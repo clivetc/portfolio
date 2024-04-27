@@ -17,7 +17,7 @@ const Github = ({ repos }: IGithubPage) => {
 };
 
 export async function getStaticProps() {
-	const repos = await getGithubRepos(process.env.GITHUB_USERNAME || "");
+	const repos = await getGithubRepos(process.env.VERCEL_GITHUB_USERNAME || "");
 
 	return {
 		props: {

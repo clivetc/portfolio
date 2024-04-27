@@ -21,8 +21,8 @@ export default async function handler(
 			port: 587,
 			secure: false,
 			auth: {
-				user: process.env.HOTMAIL_USER,
-				pass: process.env.HOTMAIL_APP_PASSWORD,
+				user: process.env.VERCEL_HOTMAIL_USER,
+				pass: process.env.VERCEL_HOTMAIL_APP_PASSWORD,
 			},
 			tls: {
 				ciphers: "SSLv3",
@@ -31,8 +31,8 @@ export default async function handler(
 		});
 
 		const mailOptions = {
-			from: process.env.HOTMAIL_USER,
-			to: process.env.GMAIL_USER,
+			from: process.env.VERCEL_HOTMAIL_USER,
+			to: process.env.VERCEL_GMAIL_USER,
 			subject: "New Message from Contact Form",
 			text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
 		};
