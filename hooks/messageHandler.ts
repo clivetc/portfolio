@@ -1,9 +1,10 @@
-import { FormikState, useFormik } from "formik";
+import { FormikState } from "formik";
 import { sendMail } from "~/service/sendEmail";
 import { IFormik } from "~/utils/interfaces";
 import * as Yup from "yup";
 import { useState } from "react";
 import { useToast } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 type ValidationSchema = Yup.ObjectSchema<IFormik>;
 
@@ -14,6 +15,7 @@ const initialValues: IFormik = {
 };
 
 export const useMessageHandler = () => {
+	const router = useRouter();
 	const toast = useToast();
 	const [isLoading, setIsLoading] = useState(false);
 	const validationSchema: ValidationSchema = Yup.object({
@@ -47,17 +49,14 @@ export const useMessageHandler = () => {
 					isClosable: true,
 					position: "top",
 				});
+				setIsLoading(false);
+				router.replace("/");
 			}
-
-			console.log("Message sent successfully:", response);
-
-			// You can add further logic here based on the response
 		} catch (error) {
-			console.error("Failed to send message:", error);
 			toast({
-				title: "Message Sent",
-				description: "Your message has been sent successfully",
-				status: "success",
+				title: "Message Not Sent",
+				description: "Error Sending Message Please Try Again!",
+				status: "error",
 				duration: 2000,
 				isClosable: true,
 				position: "top",

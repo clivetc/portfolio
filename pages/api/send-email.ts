@@ -17,6 +17,8 @@ export default async function handler(
 
 		const transporter = nodemailer.createTransport({
 			service: "hotmail",
+			host: "smtp.live.com",
+			port: 587,
 			auth: {
 				user: process.env.HOTMAIL_USER,
 				pass: process.env.HOTMAIL_APP_PASSWORD,
