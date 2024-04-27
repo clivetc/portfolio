@@ -19,9 +19,14 @@ export default async function handler(
 			service: "hotmail",
 			host: "smtp-mail.outlook.com",
 			port: 587,
+			secure: false,
 			auth: {
 				user: process.env.HOTMAIL_USER,
 				pass: process.env.HOTMAIL_APP_PASSWORD,
+			},
+			tls: {
+				ciphers: "SSLv3",
+				rejectUnauthorized: false,
 			},
 		});
 
