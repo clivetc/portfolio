@@ -16,13 +16,13 @@ export default async function handler(
 		const { name, email, message }: EmailRequestBody = req.body;
 
 		const transporter = nodemailer.createTransport({
-			service: "hotmail",
-			host: "smtp-mail.outlook.com",
-			port: 587,
-			secure: false,
+			service: "gmail",
+			host: "smtp.gmail.com",
+			port: 465,
+			secure: true,
 			auth: {
-				user: process.env.VERCEL_HOTMAIL_USER,
-				pass: process.env.VERCEL_HOTMAIL_APP_PASSWORD,
+				user: process.env.VERCEL_GMAIL_USER,
+				pass: process.env.VERCEL_GMAIL_APP_PASSWORD,
 			},
 			tls: {
 				ciphers: "SSLv3",
