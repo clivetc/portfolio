@@ -16,23 +16,19 @@ export default async function handler(
 		const { name, email, message }: EmailRequestBody = req.body;
 
 		const transporter = nodemailer.createTransport({
-			service: "gmail",
-			host: "smtp.gmail.com",
+			service: "zoho",
+			host: "smtp.zoho.com",
 			port: 465,
 			secure: true,
 			auth: {
-				user: process.env.VERCEL_GMAIL_USER,
-				pass: process.env.VERCEL_GMAIL_APP_PASSWORD,
-			},
-			tls: {
-				ciphers: "SSLv3",
-				rejectUnauthorized: false,
+				user: process.env.VERCEL_ZOHO_USER,
+				pass: process.env.VERCEL_ZOHO_APP_PASSWORD,
 			},
 		});
 
 		const mailOptions = {
-			from: process.env.VERCEL_HOTMAIL_USER,
-			to: process.env.VERCEL_GMAIL_USER,
+			from: process.env.VERCEL_ZOHO_USER,
+			to: process.env.VERCEL_HOTMAIL_USER,
 			subject: "New Message from Contact Form",
 			text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
 		};
