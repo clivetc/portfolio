@@ -21,7 +21,7 @@ const Contact = () => {
 				<Flex width="full" align="center" justifyContent="center">
 					<Box
 						p={8}
-						maxWidth="container.lg"
+						maxWidth="container.md"
 						borderWidth={1}
 						borderRadius={8}
 						boxShadow="lg"
