@@ -18,7 +18,6 @@ export default async function handler(
 		const transporter = nodemailer.createTransport({
 			host: "sandbox.smtp.mailtrap.io",
 			port: 465,
-			secure: true,
 			auth: {
 				user: process.env.VERCEL_HOTMAIL_USER,
 				pass: process.env.VERCEL_HOTMAIL_APP_PASSWORD,
