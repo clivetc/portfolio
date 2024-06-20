@@ -16,10 +16,9 @@ export default async function handler(
 		const { name, email, message }: EmailRequestBody = req.body;
 
 		const transporter = nodemailer.createTransport({
-			service: "outlook",
-			host: "smtp-mail.outlook.com",
-			port: 587,
-			secure: false,
+			host: "sandbox.smtp.mailtrap.io",
+			port: 465,
+			secure: true,
 			auth: {
 				user: process.env.VERCEL_HOTMAIL_USER,
 				pass: process.env.VERCEL_HOTMAIL_APP_PASSWORD,
@@ -27,6 +26,7 @@ export default async function handler(
 			tls: {
 				ciphers: "SSLv3",
 			},
+			logger: true,
 		});
 
 		const mailOptions = {
