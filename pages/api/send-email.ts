@@ -19,7 +19,7 @@ export default async function handler(
 			host: "sandbox.smtp.mailtrap.io",
 			port: 465,
 			auth: {
-				user: process.env.VERCEL_HOTMAIL_USER,
+				user: process.env.VERCEL_ZOHO_USER,
 				pass: process.env.VERCEL_HOTMAIL_APP_PASSWORD,
 			},
 			tls: {
