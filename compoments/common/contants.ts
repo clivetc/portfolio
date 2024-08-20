@@ -57,7 +57,7 @@ const siteConfig = {
 };
 
 const resume = {
-	url: "https://docs.google.com/document/d/16c6wKSf2joxELddFQrDsvwDCF0OXr6NQ/edit?usp=drive_link&ouid=101386957639912026427&rtpof=true&sd=true",
+	url: "https://docs.google.com/document/d/1WGDPkUGthpKwBuVoTFP4qNJBwZ5oVEbg/edit?usp=sharing&ouid=101386957639912026427&rtpof=true&sd=true",
 	icon: CgAlbum,
 	name: "Resume",
 };
