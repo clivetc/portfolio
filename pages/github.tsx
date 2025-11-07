@@ -9,7 +9,7 @@ interface IGithubPage {
 const Github = ({ repos }: IGithubPage) => {
 	return (
 		<main>
-			<Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
+			<Container maxW="container.lg" mt={["8", "12"]} mb={["8", "12"]} px={[4, 6, 8]}>
 				<GithubSection repos={repos} />
 			</Container>
 		</main>

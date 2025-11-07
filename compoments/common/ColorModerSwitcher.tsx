@@ -20,19 +20,24 @@ export const ColorModeSwitcher = (props: any) => {
 		<Tooltip
 			label={text === "dark" ? "Dark mode" : "Light mode"}
 			aria-label="A tooltip"
+			hasArrow
 		>
 			<IconButton
 				size="md"
-				fontSize="md"
+				fontSize="lg"
 				variant="ghost"
 				color="current"
 				marginLeft="2"
 				onClick={handleClick}
 				icon={<SwitchIcon />}
 				aria-label={`Switch to ${text} mode`}
+				borderRadius="lg"
 				_hover={{
-					bg: useColorModeValue("gray.200", "gray.900"),
+					bg: useColorModeValue("purple.50", "whiteAlpha.200"),
+					transform: "rotate(180deg) scale(1.1)",
+					color: useColorModeValue("purple.600", "purple.300"),
 				}}
+				transition="all 0.5s ease"
 				{...props}
 			/>
 		</Tooltip>

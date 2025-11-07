@@ -11,15 +11,17 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Tendai Clive Chikwape</title>
-				<meta name="description" />
+				<title>Tendai Clive Chikwape - Software Developer</title>
+				<meta name="description" content="Portfolio of Tendai Clive Chikwape - Full Stack Software Developer specializing in React, TypeScript, NestJS, and SpringBoot" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
+			<Container maxW="container.lg" mt={["8", "12"]} mb={["8", "12"]} px={[4, 6, 8]}>
 				<Profile />
 				<TechList />
-				<WorkPlace />
+				<Box mt={20}>
+					<WorkPlace />
+				</Box>
 			</Container>
 		</>
 	);

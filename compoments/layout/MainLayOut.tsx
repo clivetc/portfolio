@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import ParticleBackground from "../common/ParticleBackground";
 import { Analytics } from "@vercel/analytics/react";
 
 interface IMainLayout {
@@ -10,6 +11,7 @@ interface IMainLayout {
 const MainLayout: React.FC<IMainLayout> = ({ children }) => {
 	return (
 		<>
+			<ParticleBackground />
 			<Nav />
 			<main>{children}</main>
 			<Analytics mode={"production"} />

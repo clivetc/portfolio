@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## ✨ Design Features
+
+This portfolio features a modern, stunning UI with:
+
+- **Animated Gradient Backgrounds** - Dynamic mesh gradients that shift and move
+- **Glassmorphism Effects** - Frosted glass aesthetic with backdrop blur
+- **Smooth Micro-interactions** - Spring-based animations and hover effects
+- **Gradient Text & Borders** - Eye-catching purple-to-pink gradients
+- **Enhanced Typography** - Bold, modern font weights and spacing
+- **Custom Scrollbar** - Gradient-styled scrollbar matching the theme
+- **Responsive Design** - Beautiful on all screen sizes
+- **Dark Mode Support** - Seamless light/dark theme switching
+
 ## Getting Started
 
 First, run the development server:

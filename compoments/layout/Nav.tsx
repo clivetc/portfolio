@@ -29,25 +29,41 @@ const Nav = () => {
 				<NextLink href={link.link} key={link.title} passHref>
 					<CharkaLink
 						href={link.link}
-						px={2}
-						py={1}
-						rounded={"md"}
+						px={4}
+						py={2}
+						rounded={"lg"}
+						position="relative"
 						_hover={{
 							textDecoration: "none",
-							bg: useColorModeValue("gray.200", "gray.900"),
+							transform: "translateY(-2px)",
+							_after: {
+								width: "100%",
+							},
 						}}
 						bg={
 							link.link === router.pathname
-								? useColorModeValue("gray.200", "gray.900")
-								: "none"
+								? useColorModeValue("purple.50", "whiteAlpha.200")
+								: "transparent"
 						}
 						color={
 							link.link === router.pathname
-								? useColorModeValue("blue.500", "white")
-								: useColorModeValue("black", "white")
+								? useColorModeValue("purple.600", "purple.300")
+								: useColorModeValue("gray.700", "gray.200")
 						}
 						onClick={isOpen ? onClose : onOpen}
-						fontWeight="medium"
+						fontWeight="600"
+						transition="all 0.3s ease"
+						_after={{
+							content: '""',
+							position: "absolute",
+							bottom: "0",
+							left: "50%",
+							transform: "translateX(-50%)",
+							width: link.link === router.pathname ? "80%" : "0%",
+							height: "2px",
+							bgGradient: "linear(to-r, purple.500, pink.500)",
+							transition: "width 0.3s ease",
+						}}
 					>
 						{link.title}
 					</CharkaLink>
@@ -57,9 +73,19 @@ const Nav = () => {
 	);
 	return (
 		<>
-			<Box bg={useColorModeValue("white", "gray.700")} px={4} boxShadow={"lg"}>
+			<Box 
+				bg={useColorModeValue("whiteAlpha.800", "blackAlpha.600")} 
+				px={4} 
+				boxShadow={"xl"}
+				backdropFilter="blur(10px)"
+				borderBottom="1px solid"
+				borderColor={useColorModeValue("gray.200", "whiteAlpha.200")}
+				position="sticky"
+				top={0}
+				zIndex={1000}
+			>
 				<Flex
-					h={16}
+					h={20}
 					alignItems={"center"}
 					justifyContent={"space-between"}
 					w={["95%", "95%", "95%"]}
@@ -72,16 +98,40 @@ const Nav = () => {
 						aria-label={"Open Menu"}
 						display={["inherit", "inherit", "none"]}
 						onClick={isOpen ? onClose : onOpen}
+						variant="ghost"
+						_hover={{
+							bg: useColorModeValue("purple.50", "whiteAlpha.200"),
+						}}
 					/>
 					<HStack spacing={8} alignItems={"center"}>
-						<Avatar
-							as={CharkaLink}
-							size="sm"
-							href="/"
-							src="/profile_picture.png"
-							_hover={{ borderColor: "blue.500" }}
-						/>
-						<HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
+						<Box position="relative">
+							<Box
+								position="absolute"
+								top="-2px"
+								left="-2px"
+								right="-2px"
+								bottom="-2px"
+								borderRadius="full"
+								bgGradient="linear(to-r, purple.400, pink.500)"
+								opacity="0.6"
+								filter="blur(4px)"
+							/>
+							<Avatar
+								as={CharkaLink}
+								size="md"
+								href="/"
+								src="/profile_picture.png"
+								border="2px solid"
+								borderColor={useColorModeValue("white", "gray.800")}
+								position="relative"
+								cursor="pointer"
+								_hover={{ 
+									transform: "scale(1.1)",
+								}}
+								transition="all 0.3s ease"
+							/>
+						</Box>
+						<HStack as="nav" spacing="2" display={{ base: "none", md: "flex" }}>
 							{navItem}
 						</HStack>
 					</HStack>
@@ -97,7 +147,7 @@ const Nav = () => {
 						maxW={"container.lg"}
 						display={["inherit", "inherit", "none"]}
 					>
-						<Stack as={"nav"} spacing={4}>
+						<Stack as={"nav"} spacing={3}>
 							{navItem}
 						</Stack>
 					</Box>

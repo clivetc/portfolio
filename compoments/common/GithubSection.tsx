@@ -16,19 +16,24 @@ const GithubSection: React.FC<IGithubSection> = ({ repos }) => {
 		<SlideFade in offsetY={80} delay={0.2}>
 			<Heading
 				as="h1"
-				fontSize={{ base: "24px", md: "30px", lg: "36px" }}
-				mb={3}
+				fontSize={{ base: "32px", md: "40px", lg: "48px" }}
+				mb={4}
+				fontWeight="800"
+				bgGradient="linear(to-r, blue.400, purple.500)"
+				bgClip="text"
 			>
 				Github
 			</Heading>
 			<Paragraph>
-				<Text>List of my top featured github repositories. 🔖</Text>
-				<Text>
+				<Text fontSize="xl" color="gray.600" mb={2}>
+					List of my top featured github repositories. 🔖
+				</Text>
+				<Text fontSize="xl" color="gray.600">
 					Feel free to pay a visit and don't forget to leave me a star! ⭐{" "}
 				</Text>
 			</Paragraph>
-			<Box my={5}>
-				<SimpleGrid columns={[1, 1, 2]} spacing={4} mt={4}>
+			<Box my={8}>
+				<SimpleGrid columns={[1, 1, 2]} spacing={6} mt={6}>
 					{repos.map((repo) => (
 						<GithubCard gitRepo={repo} key={repo.name} />
 					))}

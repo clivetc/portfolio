@@ -19,28 +19,45 @@ import {
 const Experience = () => {
 	const { colorMode } = useColorMode();
 	return (
-		<Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
+		<Container maxW="container.lg" mt={["8", "12"]} mb={["8", "12"]} px={[4, 6, 8]}>
 			<PageSlideFade>
 				<StaggerChildren>
 					<Flex alignItems="center" my={10}>
 						<Flex alignItems={"center"}>
-							<Stack pr={3}>
+							<Stack 
+								pr={4}
+								p={3}
+								borderRadius="lg"
+								bgGradient="linear(to-r, blue.500, purple.500)"
+								color="white"
+							>
 								<BsFillBriefcaseFill size={"30px"} />
 							</Stack>
 
-							<Heading>Career</Heading>
+							<Heading 
+								fontSize={{ base: "32px", md: "40px" }}
+								fontWeight="800"
+								bgGradient="linear(to-r, blue.500, purple.500)"
+								bgClip="text"
+							>
+								Career
+							</Heading>
 						</Flex>
 					</Flex>
 
 					<VStack
-						spacing={4}
-						marginBottom={6}
+						spacing={6}
+						marginBottom={10}
 						align="left"
 						mx={[0, 0, 6]}
 						mt={5}
 					>
 						{companies.map((company, index) => (
-							<MotionBox whileHover={{ y: -5 }} key={index}>
+							<MotionBox 
+								whileHover={{ y: -8, scale: 1.02 }} 
+								key={index}
+								transition={{ type: "spring", stiffness: 300 }}
+							>
 								<ExperienceCard
 									key={index}
 									company={company}
@@ -52,22 +69,39 @@ const Experience = () => {
 
 					<Flex alignItems="center" my={10}>
 						<Flex alignItems="center">
-							<Stack pr={3}>
+							<Stack 
+								pr={4}
+								p={3}
+								borderRadius="lg"
+								bgGradient="linear(to-r, purple.500, pink.500)"
+								color="white"
+							>
 								<FaGraduationCap size={"30px"} />
 							</Stack>
-							<Heading>Education</Heading>
+							<Heading 
+								fontSize={{ base: "32px", md: "40px" }}
+								fontWeight="800"
+								bgGradient="linear(to-r, purple.500, pink.500)"
+								bgClip="text"
+							>
+								Education
+							</Heading>
 						</Flex>
 					</Flex>
 
 					<VStack
-						spacing={4}
-						marginBottom={6}
+						spacing={6}
+						marginBottom={10}
 						align="left"
 						mx={[0, 0, 6]}
 						mt={5}
 					>
 						{educations.map((education, index) => (
-							<MotionBox whileHover={{ y: -5 }} key={index}>
+							<MotionBox 
+								whileHover={{ y: -8, scale: 1.02 }} 
+								key={index}
+								transition={{ type: "spring", stiffness: 300 }}
+							>
 								<ExperienceCard
 									key={index}
 									company={education}

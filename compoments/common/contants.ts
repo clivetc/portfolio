@@ -64,12 +64,21 @@ const resume = {
 
 const companies = [
 	{
+		title: "CDL Software",
+		alt: "cdl image",
+		url: "https://www.cdl.co.uk/",
+		role: "Software Engineer",
+		skills: ["React", "AWS", "NextJs","XML"],
+		period: "Jan 2025 - Present",
+		logo: "/cdl.jpg",
+	},
+	{
 		title: "MBL Hightech",
 		alt: "mbl image",
-		url: "https://mblhightech.com/",
+		url: "http://mblhightech.net/",
 		role: "Frontend Engineer",
-		skills: ["React", "Sass", "Redux", "Redux Saga", "NextJs"],
-		period: "Nov 2021 - Present",
+		skills: ["React", "Sass", "Redux", "Redux Saga", "NextJs", "Nestjs"],
+		period: "Nov 2021 - Aug 2024",
 		logo: "/mbl.png",
 	},
 	{
