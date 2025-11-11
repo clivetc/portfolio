@@ -78,7 +78,7 @@ const StatsCounter = () => {
 	return (
 		<Box my={12}>
 			<SimpleGrid columns={[2, 2, 4]} spacing={[4, 6]}>
-				<StatItem label="Years Experience" value={3} suffix="+" delay={0} />
+				<StatItem label="Years Experience" value={4} suffix="+" delay={0} />
 				<StatItem label="Projects Completed" value={50} suffix="+" delay={0.1} />
 				<StatItem label="Technologies" value={20} suffix="+" delay={0.2} />
 				<StatItem label="Code Quality" value={99} suffix="%" delay={0.3} />

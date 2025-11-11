@@ -2,13 +2,23 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 const codeSnippets = [
-	"const developer = new SoftwareEngineer();",
-	"developer.skills.push('React', 'TypeScript');",
-	"while(learning) { skills++; }",
-	"const passion = code => innovation;",
-	"// Building the future, one commit at a time",
-	"function solve(problem) { return solution; }",
+  "const developer = new SoftwareEngineer('Tendai');",
+  "developer.stack.add('React', 'TypeScript', 'NestJS', 'AWS');",
+  "while (true) learning++; // never stop improving 🚀",
+  "const passion = (idea) => build(innovation(idea));",
+  "// Every bug is just an opportunity to learn 🐛✨",
+  "function solve(problem) { return elegantly(solution); }",
+  "commit('persistence', 'innovation', 'impact');",
+  "if (code.works) { refactor(); } // perfection is iteration 💡",
+  "const mindset = ['curious', 'creative', 'resilient'];",
+  "devLife.push('debugging', 'coffee', 'deploy', 'repeat');",
+  "try { buildFuture(); } catch (fear) { overcome(fear); }",
+  "// Turning complex problems into clean solutions 💻",
+  "import { Passion, Precision } from 'life';",
+  "await dreamToReality('next big project');",
+  "const motto = 'Code. Create. Inspire.';",
 ];
+
 
 const CodeAnimation = () => {
 	const [currentLine, setCurrentLine] = useState(0);

@@ -7,42 +7,15 @@ import {
 	HStack,
 	Icon,
 	VStack,
+	Link,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
+import { projects } from "./contants";
 
 const MotionBox = motion(Box);
-
-interface Project {
-	title: string;
-	description: string;
-	tags: string[];
-	featured?: boolean;
-	link?: string;
-	github?: string;
-}
-
-const projects: Project[] = [
-	{
-		title: "E-Commerce Platform",
-		description: "Full-stack e-commerce solution with real-time inventory management and AI-powered recommendations",
-		tags: ["React", "Node.js", "MongoDB", "AWS"],
-		featured: true,
-	},
-	{
-		title: "Task Management System",
-		description: "Collaborative project management tool with real-time updates and team analytics",
-		tags: ["Next.js", "TypeScript", "PostgreSQL"],
-		featured: true,
-	},
-	{
-		title: "Mobile Banking App",
-		description: "Secure mobile banking application with biometric authentication",
-		tags: ["React Native", "NestJS", "Redis"],
-	},
-];
 
 const ProjectShowcase = () => {
 	return (
@@ -144,34 +117,38 @@ const ProjectShowcase = () => {
 
 								<HStack spacing={4} pt={2}>
 									{project.link && (
-										<Flex
-											align="center"
-											gap={2}
-											color="purple.500"
-											cursor="pointer"
-											_hover={{ color: "purple.600" }}
-											transition="color 0.2s"
-										>
-											<Icon as={FiExternalLink} />
-											<Text fontSize="sm" fontWeight="600">
-												View Project
-											</Text>
-										</Flex>
+										<Link href={project.link} isExternal style={{ textDecoration: "none" }}>
+											<Flex
+												align="center"
+												gap={2}
+												color="purple.500"
+												cursor="pointer"
+												_hover={{ color: "purple.600" }}
+												transition="color 0.2s"
+											>
+												<Icon as={FiExternalLink} />
+												<Text fontSize="sm" fontWeight="600">
+													View Project
+												</Text>
+											</Flex>
+										</Link>
 									)}
 									{project.github && (
-										<Flex
-											align="center"
-											gap={2}
-											color="purple.500"
-											cursor="pointer"
-											_hover={{ color: "purple.600" }}
-											transition="color 0.2s"
-										>
-											<Icon as={FiGithub} />
-											<Text fontSize="sm" fontWeight="600">
-												Source Code
-											</Text>
-										</Flex>
+										<Link href={project.github} isExternal style={{ textDecoration: "none" }}>
+											<Flex
+												align="center"
+												gap={2}
+												color="purple.500"
+												cursor="pointer"
+												_hover={{ color: "purple.600" }}
+												transition="color 0.2s"
+											>
+												<Icon as={FiGithub} />
+												<Text fontSize="sm" fontWeight="600">
+													Source Code
+												</Text>
+											</Flex>
+										</Link>
 									)}
 								</HStack>
 							</VStack>

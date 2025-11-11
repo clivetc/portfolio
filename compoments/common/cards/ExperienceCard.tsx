@@ -73,8 +73,8 @@ const ExperienceCard: React.FC<IExperienceCard> = ({ company, colorMode }) => {
 							/>
 							<Image
 								rounded="full"
-								w={16}
-								h={16}
+								w={'80px'}
+								h={'60px'}
 								objectFit="cover"
 								src={company.logo}
 								alt={company.alt}

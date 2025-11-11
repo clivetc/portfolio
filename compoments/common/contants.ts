@@ -65,72 +65,125 @@ const resume = {
 };
 
 const companies = [
-	{
-		title: "CDL Software",
-		alt: "cdl image",
-		url: "https://www.cdl.co.uk/",
-		role: "Software Engineer",
-		skills: ["React", "AWS", "NextJs","XML"],
-		period: "Jan 2025 - Present",
-		logo: "/cdl.jpg",
-	},
-	{
-		title: "MBL Hightech",
-		alt: "mbl image",
-		url: "http://mblhightech.net/",
-		role: "Frontend Engineer",
-		skills: ["React", "Sass", "Redux", "Redux Saga", "NextJs", "Nestjs"],
-		period: "Nov 2021 - Aug 2024",
-		logo: "/mbl.png",
-	},
-	{
-		title: "Dekaben Bilisim",
-		alt: "dekaben image",
-		url: "https://www.facebook.com/pazar.dekaben/",
-		role: "Software Engineer",
-		skills: ["HTML", "CSS", "PHP", "MySql", "React"],
-		period: "March 2021 - Sept 2021",
-		logo: "/dekaben.jpg",
-	},
-	{
-		title: "Near East University(Robotics Lab)",
-		alt: "neu image",
-		url: "https://www.timeteccloud.com/",
-		role: "Software Developer Intern",
-		skills: ["Python", "Arduino", "Raspberry Pi"],
-		period: "Jul 2019 - Sept 2019",
-		logo: "/neu-logo.svg",
-	},
+  {
+    title: "CDL Software",
+    alt: "CDL Software logo",
+    url: "https://www.cdl.co.uk/",
+    role: "Software Engineer – Web",
+    skills: [
+      "React",
+      "Next.js",
+      "AWS Cloud Services",
+      "TypeScript",
+      "JSP",
+      "RESTful APIs",
+      "Agile Development",
+      "CI/CD Pipelines"
+    ],
+    period: "Jan 2025 – Present",
+    logo: "/cdl.jpg",
+  },
+  {
+    title: "MBL HighTech",
+    alt: "MBL HighTech logo",
+    url: "http://mblhightech.net/",
+    role: "Frontend Engineer",
+    skills: [
+      "React",
+      "Next.js",
+      "Sass",
+      "Redux",
+      "Redux-Saga",
+      "NestJS",
+      "UI/UX Optimization",
+      "Component Architecture"
+    ],
+    period: "Nov 2021 – Aug 2024",
+    logo: "/mbl.png",
+  },
+  {
+    title: "Dekaben Bilisim",
+    alt: "Dekaben Bilisim logo",
+    url: "https://www.facebook.com/pazar.dekaben/",
+    role: "Software Engineer",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "PHP",
+      "MySQL",
+      "React",
+      "API Integration",
+      "Responsive Web Design"
+    ],
+    period: "Mar 2021 – Sept 2021",
+    logo: "/dekaben.jpg",
+  },
+  {
+    title: "Near East University (Robotics Lab)",
+    alt: "Near East University Robotics Lab logo",
+    url: "https://neu.edu.tr/?lang=en",
+    role: "Software Developer Intern",
+    skills: [
+      "Python",
+      "Arduino",
+      "Raspberry Pi",
+      "IoT Systems",
+      "Automation Scripting",
+      "Sensor Integration"
+    ],
+    period: "Jul 2019 – Sept 2019",
+    logo: "/neu-logo.svg",
+  },
 ];
+
 
 const educations = [
 	{
 		title: "Near East University",
-		alt: "neu image",
+		alt: "Near East University logo",
 		url: "https://neu.edu.tr/?lang=en",
-		role: "Bachelor's Degree in Computer Information Systems",
+		role: "Bachelor’s Degree in Computer Information Systems",
 		skills: [
-			"CGPA - 2.80",
-			"Software Developer",
-			"Database Management",
-			"Network Systems",
+			"Software Development",
+			"Database Design & Management",
+			"Network Administration",
+			"Information Systems Analysis",
+			"Object-Oriented Programming"
 		],
-		period: "Sept 2016 - Feb 2021",
+		period: "Sept 2016 – Feb 2021",
 		logo: "/neu-logo.svg",
 	},
 	{
 		title: "City & Guilds",
-		alt: "c&g image",
+		alt: "City & Guilds logo",
 		url: "https://www.cityandguilds.com/",
-		role: "Telecommunication Systems-Certificate and Part Diploma",
+		role: "Telecommunication Systems – Certificate & Part Diploma",
 		skills: [
-			"Pass",
 			"Electronic Communication",
-			"Communication Systems and Digital Networks",
+			"Digital Network Systems",
+			"Signal Transmission & Switching",
+			"Telecom Infrastructure",
+			"Technical Troubleshooting"
 		],
-		period: "Jan 2015 - Jun 2016",
+		period: "Jan 2015 – Jun 2016",
 		logo: "/c&g.png",
 	},
+	{
+		title: "AWS",
+		alt: "AWS Cloud Practitioner Certification",
+		url: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+		role: "AWS Certified Cloud Practitioner",
+		skills: [
+			"Cloud Fundamentals",
+			"AWS Core Services (EC2, S3, RDS, Lambda)",
+			"Security & Compliance",
+			"Billing & Pricing",
+			"Cloud Architecture & Deployment Models"
+		],
+		period: "Valid: April 2025 – April 2028",
+		logo: "/aws.png",
+	},
+
 ];
 
 import { FaAws, FaJira } from "react-icons/fa";
@@ -266,6 +319,41 @@ const webTechStacks = [
 	},
 ];
 
+const projects = [
+	{
+		title: "Carinya Healthcare Services",
+		description: "Comprehensive healthcare platform providing disability support services with online booking, service management, and client portal for NDIS participants in Australia.",
+		tags: ["React", "Next.js", "TypeScript", "Healthcare"],
+		featured: true,
+		link: "https://carinyahealthcareservices.com.au/",
+		github: "",
+	},
+	{
+		title: "Rhuomai Home Care",
+		description: "Professional home care services platform in the UK, featuring service booking, care management, and client communication systems for elderly and disability care.",
+		tags: ["React", "Next.js", "Node.js", "Healthcare"],
+		featured: true,
+		link: "https://www.rhuomaihomecare.co.uk/",
+		github: "",
+	},
+	{
+		title: "Health AI System",
+		description: "AI-powered healthcare solution leveraging machine learning for patient data analysis, predictive diagnostics, and personalized care recommendations.",
+		tags: ["AI/ML", "Python", "React", "Healthcare", "In Progress"],
+		featured: true,
+		link: "",
+		github: "",
+	},
+	{
+		title: "AI-Powered Portfolio",
+		description: "Modern portfolio website with AI-inspired design, featuring terminal simulation, code animations, and glassmorphism effects built with Next.js and Chakra UI.",
+		tags: ["Next.js", "TypeScript", "Chakra UI", "Framer Motion"],
+		featured: false,
+		link: "",
+		github: "https://github.com/clivetc/portfolio",
+	},
+];
+
 export {
 	siteConfig,
 	resume,
@@ -274,4 +362,5 @@ export {
 	backendTechStacks,
 	webTechStacks,
 	otherTechStacks,
+	projects,
 };
