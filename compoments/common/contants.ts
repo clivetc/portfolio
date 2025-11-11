@@ -6,6 +6,8 @@ import {
 	FaSass,
 	FaReact,
 	FaNodeJs,
+	FaGitlab,
+	FaBitbucket,
 } from "react-icons/fa";
 import {
 	SiKotlin,
@@ -131,6 +133,9 @@ const educations = [
 	},
 ];
 
+import { FaAws, FaJira } from "react-icons/fa";
+import { SiAsana } from "react-icons/si";
+
 const otherTechStacks = [
 	{
 		name: "CI/CD - Vercel",
@@ -138,14 +143,39 @@ const otherTechStacks = [
 		url: "https://vercel.com/",
 	},
 	{
+		name: "AWS",
+		icon: FaAws,
+		url: "https://aws.amazon.com/",
+	},
+	{
+		name: "Asana",
+		icon: SiAsana,
+		url: "https://asana.com/",
+	},
+	{
+		name: "Jira",
+		icon: FaJira,
+		url: "https://www.atlassian.com/software/jira",
+	},
+	{
 		name: "Firebase",
 		icon: SiFirebase,
 		url: "https://firebase.google.com/",
 	},
 	{
-		name: "Github & Bitbucket",
-		icon: FaGitAlt,
+		name: "Bitbucket",
+		icon: FaBitbucket,
 		url: "https://bitbucket.org/",
+	},
+	{
+		name: "GitHub",
+		icon: FaGithub,
+		url: "http://github.com/",
+	},
+	{
+		name: "GitLab",
+		icon: FaGitlab,
+		url: "https://gitlab.com/",
 	},
 	{
 		name: "Automation",
@@ -163,6 +193,7 @@ const otherTechStacks = [
 		url: "https://www.mongodb.com/",
 	},
 ];
+
 
 const backendTechStacks = [
 	{

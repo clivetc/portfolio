@@ -6,6 +6,7 @@ import Profile from "~/compoments/common/Profile";
 import ThreeModel from "~/compoments/common/ThreeModel";
 import TechList from "~/compoments/common/TechList";
 import WorkPlace from "~/compoments/common/WorkPlace";
+import AIFeatures from "~/compoments/common/AIFeatures";
 
 export default function Home() {
 	return (
@@ -18,6 +19,7 @@ export default function Home() {
 			</Head>
 			<Container maxW="container.lg" mt={["8", "12"]} mb={["8", "12"]} px={[4, 6, 8]}>
 				<Profile />
+				<AIFeatures />
 				<TechList />
 				<Box mt={20}>
 					<WorkPlace />

@@ -120,7 +120,7 @@ const Nav = () => {
 								as={CharkaLink}
 								size="md"
 								href="/"
-								src="/profile_picture.png"
+								src="/profile_picture.jpeg"
 								border="2px solid"
 								borderColor={useColorModeValue("white", "gray.800")}
 								position="relative"

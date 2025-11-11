@@ -1,17 +1,33 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## ✨ Design Features
+## ✨ AI-Powered Portfolio Features
 
-This portfolio features a modern, stunning UI with:
+This portfolio showcases a cutting-edge, modern UI designed for software engineers:
 
+### 🤖 AI-Powered Elements
+- **AI Badge** - Animated badge highlighting AI-powered development
+- **Terminal Hero** - Live terminal simulation with rotating commands
+- **Code Animation** - Real-time typing code snippets
+- **Stats Counter** - Animated statistics with smooth counting
+- **Skills Radar** - Interactive skill level visualization with progress bars
+- **AI Features Showcase** - Highlighting key competencies with icons
+
+### 🎨 Modern Design
 - **Animated Gradient Backgrounds** - Dynamic mesh gradients that shift and move
 - **Glassmorphism Effects** - Frosted glass aesthetic with backdrop blur
 - **Smooth Micro-interactions** - Spring-based animations and hover effects
 - **Gradient Text & Borders** - Eye-catching purple-to-pink gradients
 - **Enhanced Typography** - Bold, modern font weights and spacing
 - **Custom Scrollbar** - Gradient-styled scrollbar matching the theme
+- **Particle Background** - Subtle dot pattern for depth
 - **Responsive Design** - Beautiful on all screen sizes
 - **Dark Mode Support** - Seamless light/dark theme switching
+
+### 💼 Professional Components
+- **Project Showcase** - Featured projects with tags and links
+- **Experience Timeline** - Enhanced career and education cards
+- **Tech Stack Grid** - Interactive technology cards with hover effects
+- **Contact Form** - Modern glassmorphic contact interface
 
 ## Getting Started
 

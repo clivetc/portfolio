@@ -571,3 +571,23 @@ html {
 	background: rgba(102, 126, 234, 0.3);
 	color: inherit;
 }
+
+/* Blink animation for cursor */
+@keyframes blink {
+	0%, 50% {
+		opacity: 1;
+	}
+	51%, 100% {
+		opacity: 0;
+	}
+}
+
+/* Shimmer animation for progress bars */
+@keyframes shimmer {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}

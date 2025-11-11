@@ -6,6 +6,7 @@ import {
 	Heading,
 	Link,
 	useColorModeValue,
+	VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { MotionFlex } from "~/utils/animations/motion";
@@ -13,10 +14,20 @@ import Paragraph from "./Paragraph";
 import SocialButton from "./SocialButton";
 import { resume } from "./contants";
 import { BiPhoneCall } from "react-icons/bi";
+import AIBadge from "./AIBadge";
+import CodeAnimation from "./CodeAnimation";
+import TerminalHero from "./TerminalHero";
+import StatsCounter from "./StatsCounter";
+import SkillsRadar from "./SkillsRadar";
 
 const Profile = () => {
 	return (
 		<Box position="relative">
+			{/* AI Badge */}
+			<Box mb={6} display="flex" justifyContent="center">
+				<AIBadge />
+			</Box>
+
 			<MotionFlex
 				alignItems="center"
 				justifyContent="space-between"
@@ -34,23 +45,32 @@ const Profile = () => {
 					},
 				}}
 			>
-				<Box>
+				<VStack align="flex-start" spacing={2}>
 					<Heading
 						as="h1"
 						fontSize={{ base: "32px", md: "48px", lg: "64px" }}
-						mb={3}
 						fontWeight="800"
 						bgGradient="linear(to-r, blue.400, purple.500, pink.500)"
 						bgClip="text"
 						letterSpacing="tight"
+						lineHeight="1.2"
 					>
 						Hi There, I'm Tendai! <span className="waving-hand">👋</span>
 					</Heading>
-				</Box>
+					<Heading
+						as="h2"
+						fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
+						fontWeight="600"
+						color={useColorModeValue("gray.600", "gray.400")}
+					>
+						Building intelligent solutions with modern tech
+					</Heading>
+				</VStack>
 				<MotionFlex 
 					alignItems={"flex-end"} 
 					whileHover={{ scale: 1.1, rotate: 5 }}
 					transition={{ type: "spring", stiffness: 300 }}
+					display={{ base: "none", md: "flex" }}
 				>
 					<Box position="relative">
 						<Box
@@ -67,9 +87,8 @@ const Profile = () => {
 						/>
 						<Avatar
 							name="Tendai Clive Chikwape"
-							src="/profile_picture.png"
-							mb={5}
-							size="xl"
+							src="/profile_picture.jpeg"
+							size="2xl"
 							border="4px solid"
 							borderColor={useColorModeValue("white", "gray.800")}
 							position="relative"
@@ -78,8 +97,17 @@ const Profile = () => {
 					</Box>
 				</MotionFlex>
 			</MotionFlex>
+
+			{/* Terminal Hero */}
+			<TerminalHero />
+
+			{/* Code Animation */}
+			<Box mt={6}>
+				<CodeAnimation />
+			</Box>
+
 			<Box
-				mt={4}
+				mt={6}
 				p={6}
 				borderRadius="2xl"
 				bg={useColorModeValue("whiteAlpha.700", "whiteAlpha.50")}
@@ -90,11 +118,11 @@ const Profile = () => {
 			>
 				<Paragraph textProps={{ fontSize: "2xl", lineHeight: 1.6, fontWeight: "600", mb: 3 }}>
 					<Box as="span" bgGradient="linear(to-r, blue.500, purple.500)" bgClip="text">
-						Software Developer
+						Full-Stack Software Engineer
 					</Box>
 				</Paragraph>
 				<Paragraph textProps={{ fontSize: "xl", lineHeight: 1.8, color: useColorModeValue("gray.700", "gray.300") }}>
-					Focused on{" "}
+					Specialized in{" "}
 					<Link
 						color={useColorModeValue("blue.600", "blue.300")}
 						href="https://react.dev/"
@@ -200,8 +228,15 @@ const Profile = () => {
 					</Link>
 				</Paragraph>
 			</Box>
-			<Box mt={6}>
-				<ButtonGroup spacing={4}>
+
+			{/* Stats Counter */}
+			<StatsCounter />
+
+			{/* Skills Radar */}
+			<SkillsRadar />
+
+			<Box mt={8}>
+				<ButtonGroup spacing={4} flexWrap="wrap">
 					<SocialButton social={resume} />
 					<Link href={"/contact"} style={{ textDecoration: "none" }}>
 						<Button
