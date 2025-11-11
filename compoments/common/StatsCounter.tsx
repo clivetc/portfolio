@@ -46,11 +46,10 @@ const StatItem: React.FC<StatProps> = ({ label, value, suffix = "", delay = 0 })
 			border="1px solid"
 			borderColor={useColorModeValue("gray.200", "whiteAlpha.200")}
 			boxShadow="lg"
-			_hover={{
-				transform: "translateY(-4px)",
-				boxShadow: "xl",
+			whileHover={{
+				y: -4,
+				boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
 			}}
-			transition="all 0.3s ease"
 		>
 			<Text
 				fontSize={["3xl", "4xl"]}
