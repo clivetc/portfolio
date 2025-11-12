@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 import ParticleBackground from "../common/ParticleBackground";
 import ScrollIndicator from "../common/ScrollIndicator";
+import AIChatbot from "../common/AIChatbot";
 import { Analytics } from "@vercel/analytics/react";
 
 interface IMainLayout {
@@ -14,6 +15,7 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
 		<>
 			<ScrollIndicator />
 			<ParticleBackground />
+			<AIChatbot />
 			<Nav />
 			<main>{children}</main>
 			<Analytics mode={"production"} />
