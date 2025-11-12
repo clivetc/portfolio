@@ -132,7 +132,7 @@ const companies = [
       "Sensor Integration"
     ],
     period: "Jul 2019 – Sept 2019",
-    logo: "/neu-logo.svg",
+    logo: "/neu-logo.jpeg",
   },
 ];
 
@@ -151,7 +151,7 @@ const educations = [
 			"Object-Oriented Programming"
 		],
 		period: "Sept 2016 – Feb 2021",
-		logo: "/neu-logo.svg",
+		logo: "/neu-logo.jpeg",
 	},
 	{
 		title: "City & Guilds",
