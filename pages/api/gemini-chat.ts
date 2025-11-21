@@ -24,17 +24,21 @@ Databases: MongoDB, PostgreSQL
 Cloud & Tools: AWS, Firebase, Git, GitHub, GitLab, Bitbucket, CI/CD (Vercel), Jira, Asana, Cypress
 
 FEATURED PROJECTS:
-1. Carinya Healthcare Services (https://carinyahealthcareservices.com.au/)
+1. BingaGuruHealth AI (https://zimhealth-ai-frontend.vercel.app/)
+   - Comprehensive AI-powered healthcare platform for Zimbabwe
+   - 20+ AI features: health chat, diagnostics, predictive analytics, skin analysis, drug interactions
+   - Multi-platform: Web (React), Mobile (React Native), Backend (NestJS + Python FastAPI)
+   - Multi-language: English, Shona, Ndebele
+   - Tech: React, TypeScript, NestJS, Python, OpenAI GPT-4, PostgreSQL, Redis, AWS
+   - Features: AI health chat, appointment booking, prescription management, pharmacy integration
+
+2. Carinya Healthcare Services (https://carinyahealthcareservices.com.au/)
    - Healthcare platform for NDIS disability support services in Australia
    - Tech: React, Next.js, TypeScript, Healthcare systems
 
-2. Rhuomai Home Care (https://www.rhuomaihomecare.co.uk/)
+3. Rhuomai Home Care (https://www.rhuomaihomecare.co.uk/)
    - Professional home care services platform in the UK
    - Tech: React, Next.js, Node.js, Healthcare management
-
-3. Health AI System (In Development)
-   - AI-powered healthcare solution with machine learning for diagnostics
-   - Tech: AI/ML, Python, React, Healthcare innovation
 
 EDUCATION:
 - Bachelor's Degree in Computer Information Systems, Near East University (2016-2021)
@@ -49,7 +53,7 @@ Answer questions helpfully and professionally. Keep responses concise (2-3 sente
 
 export default async function handler(
 	req: NextApiRequest,
-	res: NextApiResponse<ChatResponse>
+	res: NextApiResponse<ChatResponse>,
 ) {
 	if (req.method !== "POST") {
 		return res.status(405).json({ response: "", error: "Method not allowed" });
@@ -96,7 +100,7 @@ export default async function handler(
 						maxOutputTokens: 200,
 					},
 				}),
-			}
+			},
 		);
 
 		if (!response.ok) {
@@ -105,7 +109,8 @@ export default async function handler(
 
 		const data = await response.json();
 		const aiResponse =
-			data.candidates?.[0]?.content?.parts?.[0]?.text || getSmartResponse(message);
+			data.candidates?.[0]?.content?.parts?.[0]?.text ||
+			getSmartResponse(message);
 
 		res.status(200).json({ response: aiResponse.trim() });
 	} catch (error) {
@@ -150,7 +155,7 @@ function getSmartResponse(message: string): string {
 		lower.includes("built") ||
 		lower.includes("created")
 	) {
-		return "Tendai has built impressive healthcare platforms including Carinya Healthcare Services (NDIS platform in Australia) and Rhuomai Home Care (UK home care platform). He's currently developing a Health AI System using machine learning for diagnostics. Check out the live projects on this portfolio!";
+		return "Tendai has built impressive healthcare platforms including BingaGuruHealth AI (comprehensive AI-powered platform for Zimbabwe with 20+ AI features), Carinya Healthcare Services (NDIS platform in Australia), and Rhuomai Home Care (UK home care platform). His projects showcase expertise in AI/ML, full-stack development, and healthcare technology. Check out the live projects on this portfolio!";
 	}
 
 	// Healthcare specific
@@ -158,9 +163,10 @@ function getSmartResponse(message: string): string {
 		lower.includes("healthcare") ||
 		lower.includes("health") ||
 		lower.includes("medical") ||
-		lower.includes("ndis")
+		lower.includes("ndis") ||
+		lower.includes("bingaguru")
 	) {
-		return "Tendai has significant expertise in healthcare technology. He's built platforms for disability support services (Carinya Healthcare) and home care services (Rhuomai Home Care). He's currently developing an AI-powered healthcare solution with machine learning capabilities.";
+		return "Tendai has significant expertise in healthcare technology. His flagship project is BingaGuruHealth AI - a comprehensive platform for Zimbabwe with 20+ AI features including health chat, diagnostics, skin analysis, and drug interaction checking. He's also built Carinya Healthcare (NDIS platform in Australia) and Rhuomai Home Care (UK home care platform). His work combines AI/ML, full-stack development, and healthcare domain knowledge.";
 	}
 
 	// Contact & Hiring
@@ -197,12 +203,20 @@ function getSmartResponse(message: string): string {
 	}
 
 	// AI/ML
-	if (lower.includes("ai") || lower.includes("machine learning") || lower.includes("ml")) {
+	if (
+		lower.includes("ai") ||
+		lower.includes("machine learning") ||
+		lower.includes("ml")
+	) {
 		return "Tendai is currently developing a Health AI System that leverages machine learning for patient data analysis and predictive diagnostics. He's interested in AI/ML applications, particularly in healthcare technology. This portfolio itself features AI-powered elements!";
 	}
 
 	// Location
-	if (lower.includes("location") || lower.includes("where") || lower.includes("based")) {
+	if (
+		lower.includes("location") ||
+		lower.includes("where") ||
+		lower.includes("based")
+	) {
 		return "Tendai has worked with international companies and built platforms for clients in Australia and the UK. He's experienced in remote work and collaborating with distributed teams across different time zones.";
 	}
 

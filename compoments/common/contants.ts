@@ -65,77 +65,76 @@ const resume = {
 };
 
 const companies = [
-  {
-    title: "CDL Software",
-    alt: "CDL Software logo",
-    url: "https://www.cdl.co.uk/",
-    role: "Software Engineer – Web",
-    skills: [
-      "React",
-      "Next.js",
-      "AWS Cloud Services",
-      "TypeScript",
-      "JSP",
-      "RESTful APIs",
-      "Agile Development",
-      "CI/CD Pipelines"
-    ],
-    period: "Jan 2025 – Present",
-    logo: "/cdl.jpg",
-  },
-  {
-    title: "MBL HighTech",
-    alt: "MBL HighTech logo",
-    url: "http://mblhightech.net/",
-    role: "Frontend Engineer",
-    skills: [
-      "React",
-      "Next.js",
-      "Sass",
-      "Redux",
-      "Redux-Saga",
-      "NestJS",
-      "UI/UX Optimization",
-      "Component Architecture"
-    ],
-    period: "Nov 2021 – Aug 2024",
-    logo: "/mbl.png",
-  },
-  {
-    title: "Dekaben Bilisim",
-    alt: "Dekaben Bilisim logo",
-    url: "https://www.facebook.com/pazar.dekaben/",
-    role: "Software Engineer",
-    skills: [
-      "HTML5",
-      "CSS3",
-      "PHP",
-      "MySQL",
-      "React",
-      "API Integration",
-      "Responsive Web Design"
-    ],
-    period: "Mar 2021 – Sept 2021",
-    logo: "/dekaben.jpg",
-  },
-  {
-    title: "Near East University (Robotics Lab)",
-    alt: "Near East University Robotics Lab logo",
-    url: "https://neu.edu.tr/?lang=en",
-    role: "Software Developer Intern",
-    skills: [
-      "Python",
-      "Arduino",
-      "Raspberry Pi",
-      "IoT Systems",
-      "Automation Scripting",
-      "Sensor Integration"
-    ],
-    period: "Jul 2019 – Sept 2019",
-    logo: "/neu-logo.jpeg",
-  },
+	{
+		title: "CDL Software",
+		alt: "CDL Software logo",
+		url: "https://www.cdl.co.uk/",
+		role: "Software Engineer – Web",
+		skills: [
+			"React",
+			"Next.js",
+			"AWS Cloud Services",
+			"TypeScript",
+			"JSP",
+			"RESTful APIs",
+			"Agile Development",
+			"CI/CD Pipelines",
+		],
+		period: "Jan 2025 – Present",
+		logo: "/cdl.jpg",
+	},
+	{
+		title: "MBL HighTech",
+		alt: "MBL HighTech logo",
+		url: "http://mblhightech.net/",
+		role: "Frontend Engineer",
+		skills: [
+			"React",
+			"Next.js",
+			"Sass",
+			"Redux",
+			"Redux-Saga",
+			"NestJS",
+			"UI/UX Optimization",
+			"Component Architecture",
+		],
+		period: "Nov 2021 – Aug 2024",
+		logo: "/mbl.png",
+	},
+	{
+		title: "Dekaben Bilisim",
+		alt: "Dekaben Bilisim logo",
+		url: "https://www.facebook.com/pazar.dekaben/",
+		role: "Software Engineer",
+		skills: [
+			"HTML5",
+			"CSS3",
+			"PHP",
+			"MySQL",
+			"React",
+			"API Integration",
+			"Responsive Web Design",
+		],
+		period: "Mar 2021 – Sept 2021",
+		logo: "/dekaben.jpg",
+	},
+	{
+		title: "Near East University (Robotics Lab)",
+		alt: "Near East University Robotics Lab logo",
+		url: "https://neu.edu.tr/?lang=en",
+		role: "Software Developer Intern",
+		skills: [
+			"Python",
+			"Arduino",
+			"Raspberry Pi",
+			"IoT Systems",
+			"Automation Scripting",
+			"Sensor Integration",
+		],
+		period: "Jul 2019 – Sept 2019",
+		logo: "/neu-logo.jpeg",
+	},
 ];
-
 
 const educations = [
 	{
@@ -148,7 +147,7 @@ const educations = [
 			"Database Design & Management",
 			"Network Administration",
 			"Information Systems Analysis",
-			"Object-Oriented Programming"
+			"Object-Oriented Programming",
 		],
 		period: "Sept 2016 – Feb 2021",
 		logo: "/neu-logo.jpeg",
@@ -163,7 +162,7 @@ const educations = [
 			"Digital Network Systems",
 			"Signal Transmission & Switching",
 			"Telecom Infrastructure",
-			"Technical Troubleshooting"
+			"Technical Troubleshooting",
 		],
 		period: "Jan 2015 – Jun 2016",
 		logo: "/c&g.png",
@@ -178,12 +177,11 @@ const educations = [
 			"AWS Core Services (EC2, S3, RDS, Lambda)",
 			"Security & Compliance",
 			"Billing & Pricing",
-			"Cloud Architecture & Deployment Models"
+			"Cloud Architecture & Deployment Models",
 		],
 		period: "Valid: April 2025 – April 2028",
 		logo: "/aws.png",
 	},
-
 ];
 
 import { FaAws, FaJira } from "react-icons/fa";
@@ -246,7 +244,6 @@ const otherTechStacks = [
 		url: "https://www.mongodb.com/",
 	},
 ];
-
 
 const backendTechStacks = [
 	{
@@ -321,8 +318,28 @@ const webTechStacks = [
 
 const projects = [
 	{
+		title: "BingaGuruHealth AI",
+		description:
+			"Comprehensive AI-powered healthcare platform for Zimbabwe with 20+ AI features including health chat, diagnostics, and predictive analytics. Features trainable, self-learning AI models using OpenAI GPT-4 and Ollama (local LLM) that improve with user feedback. Multi-platform (Web, iOS, Android) with support for English, Shona, and Ndebele.",
+		tags: [
+			"React",
+			"React Native",
+			"NestJS",
+			"Python",
+			"AI/ML",
+			"OpenAI",
+			"Ollama",
+			"Machine Learning",
+			"PostgreSQL",
+		],
+		featured: true,
+		link: "https://zimhealth-ai-frontend.vercel.app/",
+		github: "",
+	},
+	{
 		title: "Carinya Healthcare Services",
-		description: "Comprehensive healthcare platform providing disability support services with online booking, service management, and client portal for NDIS participants in Australia.",
+		description:
+			"Comprehensive healthcare platform providing disability support services with online booking, service management, and client portal for NDIS participants in Australia.",
 		tags: ["React", "Next.js", "TypeScript", "Healthcare"],
 		featured: true,
 		link: "https://carinyahealthcareservices.com.au/",
@@ -330,23 +347,17 @@ const projects = [
 	},
 	{
 		title: "Rhuomai Home Care",
-		description: "Professional home care services platform in the UK, featuring service booking, care management, and client communication systems for elderly and disability care.",
+		description:
+			"Professional home care services platform in the UK, featuring service booking, care management, and client communication systems for elderly and disability care.",
 		tags: ["React", "Next.js", "Node.js", "Healthcare"],
 		featured: true,
 		link: "https://www.rhuomaihomecare.co.uk/",
 		github: "",
 	},
 	{
-		title: "Health AI System",
-		description: "AI-powered healthcare solution leveraging machine learning for patient data analysis, predictive diagnostics, and personalized care recommendations.",
-		tags: ["AI/ML", "Python", "React", "Healthcare", "In Progress"],
-		featured: true,
-		link: "",
-		github: "",
-	},
-	{
 		title: "AI-Powered Portfolio",
-		description: "Modern portfolio website with AI-inspired design, featuring terminal simulation, code animations, and glassmorphism effects built with Next.js and Chakra UI.",
+		description:
+			"Modern portfolio website with AI-inspired design, featuring terminal simulation, code animations, and glassmorphism effects built with Next.js and Chakra UI.",
 		tags: ["Next.js", "TypeScript", "Chakra UI", "Framer Motion"],
 		featured: false,
 		link: "",
