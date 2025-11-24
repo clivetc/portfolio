@@ -1,10 +1,14 @@
-// pages/api/sendEmail.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+import {
+	ContactEmailTemplate,
+	ContactAutoReplyTemplate,
+} from "~/compoments/ContactEmailTemplate";
 
 interface EmailRequestBody {
 	name: string;
 	email: string;
+	phone?: string;
 	message: string;
 }
 
@@ -12,50 +16,51 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse,
 ) {
-	if (req.method === "POST") {
-		const { name, email, message }: EmailRequestBody = req.body;
+	if (req.method !== "POST") {
+		return res
+			.status(405)
+			.json({ success: false, error: "Method not allowed." });
+	}
 
-		// Gmail SMTP configuration
+	const { name, email, phone, message }: EmailRequestBody = req.body;
+
+	if (!name || !email || !message) {
+		return res
+			.status(400)
+			.json({ success: false, error: "Missing required fields." });
+	}
+
+	try {
 		const transporter = nodemailer.createTransport({
-			service: "gmail",
+			host: "smtp.gmail.com",
+			port: 465,
+			secure: true,
 			auth: {
-				user: process.env.GMAIL_USER, // Your Gmail address
-				pass: process.env.GMAIL_APP_PASSWORD, // Your Gmail App Password
+				user: process.env.GMAIL_USER,
+				pass: process.env.GMAIL_APP_PASSWORD,
 			},
 		});
 
-		const mailOptions = {
-			from: process.env.GMAIL_USER,
-			to: process.env.GMAIL_USER, // Where you want to receive messages
-			replyTo: email, // Visitor's email for easy reply
-			subject: `Portfolio Contact: Message from ${name}`,
-			text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-			html: `
-				<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-					<h2 style="color: #667eea;">New Contact Form Submission</h2>
-					<div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-						<p><strong>Name:</strong> ${name}</p>
-						<p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-					</div>
-					<div style="background: #fff; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px;">
-						<h3 style="color: #4a5568; margin-top: 0;">Message:</h3>
-						<p style="color: #2d3748; line-height: 1.6;">${message}</p>
-					</div>
-					<p style="color: #718096; font-size: 12px; margin-top: 20px;">
-						This message was sent from your portfolio contact form.
-					</p>
-				</div>
-			`,
-		};
+		// Send email to yourself
+		await transporter.sendMail({
+			from: `"${name}" <${process.env.GMAIL_USER}>`,
+			to: process.env.GMAIL_USER,
+			replyTo: email,
+			subject: `📬 Portfolio Message from ${name}`,
+			html: ContactEmailTemplate({ name, email, phone, message }),
+		});
 
-		try {
-			await transporter.sendMail(mailOptions);
-			res.status(200).json({ success: true });
-		} catch (error) {
-			console.error(error);
-			res.status(500).json({ success: false, error: "Failed to send email." });
-		}
-	} else {
-		res.status(405).json({ success: false, error: "Method not allowed." });
+		// Send automatic reply to user
+		await transporter.sendMail({
+			from: `"Tendai Chikwape" <${process.env.GMAIL_USER}>`,
+			to: email,
+			subject: "Thank you for contacting us!",
+			html: ContactAutoReplyTemplate(name),
+		});
+
+		res.status(200).json({ success: true });
+	} catch (error) {
+		console.error("❌ Error sending email:", error);
+		res.status(500).json({ success: false, error: "Failed to send email." });
 	}
 }
