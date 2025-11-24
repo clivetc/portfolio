@@ -104,7 +104,7 @@ export const ContactAutoReplyTemplate = (name: string) => `
       <p>Hi ${name},</p>
       <p>Thank you for contacting us! Our team will review your message and get back to you as soon as possible.</p>
       <a href="https://www.tendaiclivechikwape.co.uk/" class="cta-button">Visit Our Website</a>
-      <p class="footer">This is an automated response from your AI-powered contact form.</p>
+      <p class="footer">This is an automated response from Tendai's AI-powered contact form.</p>
     </div>
   </div>
 </body>
