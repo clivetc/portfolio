@@ -6,7 +6,7 @@ Allow: /
 # Disallow: /admin/
 
 # Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: hhttps://www.tendaiclivechikwape.co.uk/sitemap.xml
 
 # Crawl-delay (optional, in seconds)
 Crawl-delay: 1
