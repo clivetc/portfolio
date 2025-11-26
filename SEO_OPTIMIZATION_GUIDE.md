@@ -1,43 +1,62 @@
 # 🔍 SEO Optimization Guide
 
 ## Overview
+
 Your portfolio is now optimized for search engines with comprehensive meta tags, Open Graph data, and structured data (JSON-LD).
 
 ## ✅ What's Been Added
 
 ### 1. Enhanced Title Tag
+
 ```html
-<title>Tendai Clive Chikwape | Full Stack Software Engineer | React, TypeScript, Node.js Developer</title>
+<title>
+	Tendai Clive Chikwape | Full Stack Software Engineer | React, TypeScript,
+	Node.js Developer
+</title>
 ```
+
 - **Includes**: Name, role, and key technologies
 - **Length**: ~90 characters (optimal for Google)
 - **Keywords**: Software Engineer, React, TypeScript, Node.js
 
 ### 2. Improved Meta Description
+
 ```html
-<meta name="description" content="Experienced Full Stack Software Engineer specializing in React, Next.js, TypeScript, Node.js, NestJS, and SpringBoot. Building scalable web applications with modern technologies. Available for hire." />
+<meta
+	name="description"
+	content="Experienced Full Stack Software Engineer specializing in React, Next.js, TypeScript, Node.js, NestJS, and SpringBoot. Building scalable web applications with modern technologies. Available for hire."
+/>
 ```
+
 - **Length**: ~160 characters (optimal)
 - **Includes**: Experience level, technologies, call-to-action
 - **Keywords**: Full Stack, React, TypeScript, Node.js, etc.
 
 ### 3. Keywords Meta Tag
+
 ```html
-<meta name="keywords" content="Tendai Chikwape, Software Engineer, Full Stack Developer, React Developer, TypeScript Developer, Next.js Developer, Node.js Developer, NestJS, SpringBoot, Frontend Engineer, Backend Engineer, Web Developer, JavaScript Developer, Software Development, Hire Developer, Portfolio" />
+<meta
+	name="keywords"
+	content="Tendai Chikwape, Software Engineer, Full Stack Developer, React Developer, TypeScript Developer, Next.js Developer, Node.js Developer, NestJS, SpringBoot, Frontend Engineer, Backend Engineer, Web Developer, JavaScript Developer, Software Development, Hire Developer, Portfolio"
+/>
 ```
+
 - **Includes**: Name variations, job titles, technologies, hiring intent
 
 ### 4. Open Graph Tags (Facebook, LinkedIn)
+
 - Optimized for social media sharing
 - Custom title, description, and image
 - Proper URL and site name
 
 ### 5. Twitter Card Tags
+
 - Large image card format
 - Optimized for Twitter sharing
 - Custom title, description, and image
 
 ### 6. Structured Data (JSON-LD)
+
 - Schema.org Person markup
 - Job title and organization
 - Social media profiles
@@ -47,7 +66,9 @@ Your portfolio is now optimized for search engines with comprehensive meta tags,
 ## 🎯 Action Items
 
 ### 1. Update Your Domain
+
 Replace `https://your-domain.com` with your actual domain in:
+
 - `pages/index.tsx` (all meta tags)
 - Canonical URL
 - Open Graph URL
@@ -55,6 +76,7 @@ Replace `https://your-domain.com` with your actual domain in:
 - JSON-LD URL
 
 **Find and replace:**
+
 ```
 https://your-domain.com → https://tendaichikwape.com
 ```
@@ -62,6 +84,7 @@ https://your-domain.com → https://tendaichikwape.com
 ### 2. Create Social Media Images
 
 #### Open Graph Image (og-image.png)
+
 - **Size**: 1200 x 630 pixels
 - **Format**: PNG or JPG
 - **Location**: `/public/og-image.png`
@@ -69,12 +92,14 @@ https://your-domain.com → https://tendaichikwape.com
 - **Design**: Use your brand colors (purple/blue gradient)
 
 #### Twitter Image (twitter-image.png)
+
 - **Size**: 1200 x 675 pixels
 - **Format**: PNG or JPG
 - **Location**: `/public/twitter-image.png`
 - **Content**: Similar to OG image but optimized for Twitter
 
 **Quick Design Tips:**
+
 ```
 ┌─────────────────────────────────────┐
 │                                     │
@@ -94,6 +119,7 @@ https://your-domain.com → https://tendaichikwape.com
 Generate favicons using [Favicon Generator](https://realfavicongenerator.net/):
 
 **Required files:**
+
 - `favicon.ico` (16x16, 32x32, 48x48)
 - `apple-touch-icon.png` (180x180)
 - `favicon-32x32.png` (32x32)
@@ -104,18 +130,20 @@ Place all in `/public/` folder.
 ### 4. Add robots.txt
 
 Create `/public/robots.txt`:
+
 ```txt
 # Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: hhttps://www.tendaiclivechikwape.co.uk/sitemap.xml
 ```
 
 ### 5. Create sitemap.xml
 
 Create `/public/sitemap.xml`:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -126,19 +154,19 @@ Create `/public/sitemap.xml`:
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/experience</loc>
+    <loc>hhttps://www.tendaiclivechikwape.co.uk/experience</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/github</loc>
+    <loc>hhttps://www.tendaiclivechikwape.co.uk/github</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.com/contact</loc>
+    <loc>hhttps://www.tendaiclivechikwape.co.uk/contact</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -149,6 +177,7 @@ Create `/public/sitemap.xml`:
 ## 🚀 Submit to Search Engines
 
 ### Google Search Console
+
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Add your property (domain or URL prefix)
 3. Verify ownership (DNS or HTML file)
@@ -156,6 +185,7 @@ Create `/public/sitemap.xml`:
 5. Request indexing for main pages
 
 ### Bing Webmaster Tools
+
 1. Go to [Bing Webmaster Tools](https://www.bing.com/webmasters)
 2. Add your site
 3. Verify ownership
@@ -164,6 +194,7 @@ Create `/public/sitemap.xml`:
 ## 📊 SEO Checklist
 
 ### On-Page SEO ✅
+
 - [x] Optimized title tag
 - [x] Meta description
 - [x] Keywords meta tag
@@ -175,6 +206,7 @@ Create `/public/sitemap.xml`:
 - [x] Fast loading speed
 
 ### Technical SEO
+
 - [x] HTTPS (when deployed)
 - [ ] robots.txt file
 - [ ] sitemap.xml file
@@ -183,12 +215,14 @@ Create `/public/sitemap.xml`:
 - [ ] Submit to search engines
 
 ### Social Media SEO ✅
+
 - [x] Open Graph tags
 - [x] Twitter Card tags
 - [ ] Social media images
 - [x] Social media links
 
 ### Content SEO
+
 - [x] Clear headings (H1, H2, H3)
 - [x] Descriptive content
 - [x] Internal linking
@@ -198,6 +232,7 @@ Create `/public/sitemap.xml`:
 ## 🎯 Keywords to Rank For
 
 ### Primary Keywords
+
 - Tendai Chikwape
 - Tendai Clive Chikwape
 - Full Stack Software Engineer
@@ -205,6 +240,7 @@ Create `/public/sitemap.xml`:
 - TypeScript Developer
 
 ### Secondary Keywords
+
 - Next.js Developer
 - Node.js Developer
 - NestJS Developer
@@ -213,6 +249,7 @@ Create `/public/sitemap.xml`:
 - Backend Engineer
 
 ### Long-tail Keywords
+
 - Full Stack Developer React TypeScript
 - Software Engineer React Node.js
 - Hire React Developer
@@ -222,7 +259,9 @@ Create `/public/sitemap.xml`:
 ## 📈 Monitoring & Analytics
 
 ### Google Analytics
+
 Add to `pages/_app.tsx`:
+
 ```typescript
 import Script from 'next/script';
 
@@ -242,6 +281,7 @@ import Script from 'next/script';
 ```
 
 ### Track These Metrics
+
 - Page views
 - Bounce rate
 - Time on site
@@ -252,17 +292,20 @@ import Script from 'next/script';
 ## 🔗 Link Building
 
 ### Internal Links
+
 - Link between pages
 - Link to projects
 - Link to social profiles
 
 ### External Links
+
 - GitHub profile
 - LinkedIn profile
 - Social media
 - Blog posts (if any)
 
 ### Backlinks
+
 - Share on social media
 - Add to LinkedIn profile
 - Add to GitHub profile
@@ -273,18 +316,21 @@ import Script from 'next/script';
 ## 📱 Social Media Optimization
 
 ### LinkedIn
+
 - Add portfolio URL to profile
 - Share projects
 - Post about technologies
 - Engage with community
 
 ### GitHub
+
 - Add portfolio URL to profile
 - Pin important repositories
 - Keep profile updated
 - Contribute regularly
 
 ### Twitter
+
 - Share portfolio
 - Tweet about projects
 - Use relevant hashtags
@@ -293,17 +339,19 @@ import Script from 'next/script';
 ## 🎨 Image Optimization
 
 ### All Images Should Have:
+
 ```typescript
 <Image
-  src="/image.png"
-  alt="Descriptive alt text with keywords"
-  width={500}
-  height={300}
-  loading="lazy"
+	src="/image.png"
+	alt="Descriptive alt text with keywords"
+	width={500}
+	height={300}
+	loading="lazy"
 />
 ```
 
 ### Alt Text Examples:
+
 - ❌ "image1.png"
 - ✅ "Tendai Chikwape - Full Stack Software Engineer"
 - ✅ "React TypeScript project dashboard"
@@ -312,11 +360,13 @@ import Script from 'next/script';
 ## 🚀 Performance Optimization
 
 ### Core Web Vitals
+
 - **LCP** (Largest Contentful Paint): < 2.5s
 - **FID** (First Input Delay): < 100ms
 - **CLS** (Cumulative Layout Shift): < 0.1
 
 ### Optimization Tips
+
 - Use Next.js Image component
 - Lazy load images
 - Minimize JavaScript
@@ -327,17 +377,20 @@ import Script from 'next/script';
 ## 📊 Testing Tools
 
 ### SEO Testing
+
 - [Google Search Console](https://search.google.com/search-console)
 - [Google Rich Results Test](https://search.google.com/test/rich-results)
 - [SEO Site Checkup](https://seositecheckup.com/)
 - [Ahrefs SEO Checker](https://ahrefs.com/seo-checker)
 
 ### Performance Testing
+
 - [Google PageSpeed Insights](https://pagespeed.web.dev/)
 - [GTmetrix](https://gtmetrix.com/)
 - [WebPageTest](https://www.webpagetest.org/)
 
 ### Social Media Preview
+
 - [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
 - [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 - [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
@@ -345,12 +398,14 @@ import Script from 'next/script';
 ## 🎯 Expected Results
 
 ### Timeline
+
 - **Week 1-2**: Indexed by Google
 - **Week 3-4**: Ranking for name
 - **Month 2-3**: Ranking for job title + location
 - **Month 4-6**: Ranking for technologies
 
 ### Success Metrics
+
 - Appears in Google for your name
 - Appears in Google for "Full Stack Developer [Your City]"
 - Appears in Google for "React Developer [Your City]"
@@ -360,6 +415,7 @@ import Script from 'next/script';
 ## 🔄 Ongoing Maintenance
 
 ### Monthly Tasks
+
 - [ ] Update content
 - [ ] Check search rankings
 - [ ] Review analytics
@@ -367,6 +423,7 @@ import Script from 'next/script';
 - [ ] Share on social media
 
 ### Quarterly Tasks
+
 - [ ] Update meta descriptions
 - [ ] Refresh images
 - [ ] Update structured data
@@ -378,6 +435,7 @@ import Script from 'next/script';
 **Your portfolio is now optimized for search engines! 🚀**
 
 Next steps:
+
 1. Replace domain URLs
 2. Create social media images
 3. Generate favicons
