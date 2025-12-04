@@ -29,11 +29,14 @@ export default function Home() {
 				/>
 				<meta name="author" content="Tendai Clive Chikwape" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="canonical" href="https://your-domain.com" />
+				<link rel="canonical" href="https://www.tendaiclivechikwape.co.uk" />
 
 				{/* Open Graph / Facebook */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://your-domain.com" />
+				<meta
+					property="og:url"
+					content="https://www.tendaiclivechikwape.co.uk"
+				/>
 				<meta
 					property="og:title"
 					content="Tendai Clive Chikwape | Full Stack Software Engineer"
@@ -44,13 +47,16 @@ export default function Home() {
 				/>
 				<meta
 					property="og:image"
-					content="hhttps://www.tendaiclivechikwape.co.uk/og-image.png"
+					content="https://www.tendaiclivechikwape.co.uk/og-image.png"
 				/>
 				<meta property="og:site_name" content="Tendai Chikwape Portfolio" />
 
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://your-domain.com" />
+				<meta
+					property="twitter:url"
+					content="https://www.tendaiclivechikwape.co.uk"
+				/>
 				<meta
 					property="twitter:title"
 					content="Tendai Clive Chikwape | Full Stack Software Engineer"
@@ -61,7 +67,7 @@ export default function Home() {
 				/>
 				<meta
 					property="twitter:image"
-					content="hhttps://www.tendaiclivechikwape.co.uk/twitter-image.png"
+					content="https://www.tendaiclivechikwape.co.uk/twitter-image.png"
 				/>
 
 				{/* Additional SEO */}
@@ -90,28 +96,38 @@ export default function Home() {
 					href="/favicon-16x16.png"
 				/>
 
-				{/* Structured Data - JSON-LD */}
+				{/* Structured Data - JSON-LD for Person */}
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify({
 							"@context": "https://schema.org",
 							"@type": "Person",
+							"@id": "https://www.tendaiclivechikwape.co.uk/#person",
 							name: "Tendai Clive Chikwape",
-							url: "https://your-domain.com",
+							alternateName: "Tendai Chikwape",
+							url: "https://www.tendaiclivechikwape.co.uk",
 							image:
-								"hhttps://www.tendaiclivechikwape.co.uk/profile_picture.png",
+								"https://www.tendaiclivechikwape.co.uk/profile_picture.png",
 							jobTitle: "Full Stack Software Engineer",
+							description:
+								"Experienced Full Stack Software Engineer specializing in React, Next.js, TypeScript, Node.js, NestJS, and SpringBoot. Building scalable web applications with modern technologies.",
+							email: "clivetchikwape@gmail.com",
+							telephone: "+44-XXX-XXX-XXXX",
 							worksFor: {
 								"@type": "Organization",
 								name: "CDL Software",
+								url: "https://www.cdl.co.uk/",
 							},
-							description:
-								"Experienced Full Stack Software Engineer specializing in React, Next.js, TypeScript, Node.js, NestJS, and SpringBoot",
+							alumniOf: {
+								"@type": "EducationalOrganization",
+								name: "Near East University",
+								url: "https://neu.edu.tr/?lang=en",
+							},
 							sameAs: [
 								"https://github.com/clivetc",
 								"https://www.linkedin.com/in/tendai-chikwape-523b3a55/",
-								"mailto:clivetchikwape@gmail.com",
+								"https://twitter.com/tendaichikwape",
 							],
 							knowsAbout: [
 								"React",
@@ -127,6 +143,115 @@ export default function Home() {
 								"Full Stack Development",
 								"Frontend Development",
 								"Backend Development",
+								"Healthcare Technology",
+								"Web Development",
+							],
+							knowsLanguage: ["English"],
+						}),
+					}}
+				/>
+
+				{/* Structured Data - JSON-LD for Professional Service */}
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							"@context": "https://schema.org",
+							"@type": "ProfessionalService",
+							"@id": "https://www.tendaiclivechikwape.co.uk/#service",
+							name: "Tendai Chikwape - Software Development Services",
+							image:
+								"https://www.tendaiclivechikwape.co.uk/profile_picture.png",
+							url: "https://www.tendaiclivechikwape.co.uk",
+							telephone: "+44-XXX-XXX-XXXX",
+							email: "clivetchikwape@gmail.com",
+							priceRange: "$$",
+							address: {
+								"@type": "PostalAddress",
+								addressCountry: "UK",
+							},
+							geo: {
+								"@type": "GeoCoordinates",
+								addressCountry: "UK",
+							},
+							description:
+								"Professional software development services specializing in React, Next.js, TypeScript, Node.js, and full-stack web applications. Healthcare technology expertise.",
+							areaServed: ["UK", "International", "Remote"],
+							serviceType: [
+								"Web Development",
+								"Full Stack Development",
+								"React Development",
+								"TypeScript Development",
+								"Healthcare Software",
+								"Software Consulting",
+							],
+							provider: {
+								"@type": "Person",
+								name: "Tendai Clive Chikwape",
+							},
+						}),
+					}}
+				/>
+
+				{/* Structured Data - JSON-LD for Portfolio/Website */}
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							"@context": "https://schema.org",
+							"@type": "WebSite",
+							"@id": "https://www.tendaiclivechikwape.co.uk/#website",
+							url: "https://www.tendaiclivechikwape.co.uk",
+							name: "Tendai Clive Chikwape - Full Stack Software Engineer Portfolio",
+							description:
+								"Portfolio of Tendai Clive Chikwape, an experienced Full Stack Software Engineer specializing in React, TypeScript, Node.js, and modern web technologies.",
+							publisher: {
+								"@type": "Person",
+								name: "Tendai Clive Chikwape",
+							},
+							inLanguage: "en-GB",
+							potentialAction: {
+								"@type": "SearchAction",
+								target:
+									"https://www.tendaiclivechikwape.co.uk/?s={search_term_string}",
+								"query-input": "required name=search_term_string",
+							},
+						}),
+					}}
+				/>
+
+				{/* Structured Data - JSON-LD for BreadcrumbList */}
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							"@context": "https://schema.org",
+							"@type": "BreadcrumbList",
+							itemListElement: [
+								{
+									"@type": "ListItem",
+									position: 1,
+									name: "Home",
+									item: "https://www.tendaiclivechikwape.co.uk",
+								},
+								{
+									"@type": "ListItem",
+									position: 2,
+									name: "Experience",
+									item: "https://www.tendaiclivechikwape.co.uk/experience",
+								},
+								{
+									"@type": "ListItem",
+									position: 3,
+									name: "Projects",
+									item: "https://www.tendaiclivechikwape.co.uk/github",
+								},
+								{
+									"@type": "ListItem",
+									position: 4,
+									name: "Contact",
+									item: "https://www.tendaiclivechikwape.co.uk/contact",
+								},
 							],
 						}),
 					}}
