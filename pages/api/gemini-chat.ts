@@ -24,7 +24,7 @@ Databases: MongoDB, PostgreSQL
 Cloud & Tools: AWS, Firebase, Git, GitHub, GitLab, Bitbucket, CI/CD (Vercel), Jira, Asana, Cypress
 
 FEATURED PROJECTS:
-1. BingaGuruHealth AI (https://zimhealth-ai-frontend.vercel.app/)
+1. AfyaAI (https://zimhealth-ai-frontend.vercel.app/)
    - Comprehensive AI-powered healthcare platform for Zimbabwe
    - 20+ AI features: health chat, diagnostics, predictive analytics, skin analysis, drug interactions
    - Multi-platform: Web (React), Mobile (React Native), Backend (NestJS + Python FastAPI)
@@ -155,7 +155,7 @@ function getSmartResponse(message: string): string {
 		lower.includes("built") ||
 		lower.includes("created")
 	) {
-		return "Tendai has built impressive healthcare platforms including BingaGuruHealth AI (comprehensive AI-powered platform for Zimbabwe with 20+ AI features), Carinya Healthcare Services (NDIS platform in Australia), and Rhuomai Home Care (UK home care platform). His projects showcase expertise in AI/ML, full-stack development, and healthcare technology. Check out the live projects on this portfolio!";
+		return "Tendai has built impressive healthcare platforms including AfyaAI (comprehensive AI-powered platform for Zimbabwe with 20+ AI features), Carinya Healthcare Services (NDIS platform in Australia), and Rhuomai Home Care (UK home care platform). His projects showcase expertise in AI/ML, full-stack development, and healthcare technology. Check out the live projects on this portfolio!";
 	}
 
 	// Healthcare specific
@@ -166,7 +166,7 @@ function getSmartResponse(message: string): string {
 		lower.includes("ndis") ||
 		lower.includes("bingaguru")
 	) {
-		return "Tendai has significant expertise in healthcare technology. His flagship project is BingaGuruHealth AI - a comprehensive platform for Zimbabwe with 20+ AI features including health chat, diagnostics, skin analysis, and drug interaction checking. He's also built Carinya Healthcare (NDIS platform in Australia) and Rhuomai Home Care (UK home care platform). His work combines AI/ML, full-stack development, and healthcare domain knowledge.";
+		return "Tendai has significant expertise in healthcare technology. His flagship project is AfyaAI - a comprehensive platform for Zimbabwe with 20+ AI features including health chat, diagnostics, skin analysis, and drug interaction checking. He's also built Carinya Healthcare (NDIS platform in Australia) and Rhuomai Home Care (UK home care platform). His work combines AI/ML, full-stack development, and healthcare domain knowledge.";
 	}
 
 	// Contact & Hiring

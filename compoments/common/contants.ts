@@ -318,7 +318,7 @@ const webTechStacks = [
 
 const projects = [
 	{
-		title: "BingaGuruHealth AI",
+		title: "AfyaAI",
 		description:
 			"Comprehensive AI-powered healthcare platform for Zimbabwe with 20+ AI features including health chat, diagnostics, and predictive analytics. Features trainable, self-learning AI models using OpenAI GPT-4 and Ollama (local LLM) that improve with user feedback. Multi-platform (Web, iOS, Android) with support for English, Shona, and Ndebele.",
 		tags: [
