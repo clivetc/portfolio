@@ -318,7 +318,7 @@ const webTechStacks = [
 
 const projects = [
 	{
-		title: "AfyaAI",
+		title: "MedAccess AI",
 		description:
 			"Comprehensive AI-powered healthcare platform for Zimbabwe with 20+ AI features including health chat, diagnostics, and predictive analytics. Features trainable, self-learning AI models using OpenAI GPT-4 and Ollama (local LLM) that improve with user feedback. Multi-platform (Web, iOS, Android) with support for English, Shona, and Ndebele.",
 		tags: [
