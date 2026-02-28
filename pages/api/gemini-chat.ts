@@ -164,7 +164,7 @@ function getSmartResponse(message: string): string {
 		lower.includes("health") ||
 		lower.includes("medical") ||
 		lower.includes("ndis") ||
-		lower.includes("bingaguru")
+		lower.includes("medaccess")
 	) {
 		return "Tendai has significant expertise in healthcare technology. His flagship project is MedAccess AI - a comprehensive platform for Zimbabwe with 20+ AI features including health chat, diagnostics, skin analysis, and drug interaction checking. He's also built Carinya Healthcare (NDIS platform in Australia) and Rhuomai Home Care (UK home care platform). His work combines AI/ML, full-stack development, and healthcare domain knowledge.";
 	}
